@@ -24,17 +24,21 @@
     text-wrap-style: balance;
     text-align: center;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.little-stars {
+    background-image: url("img/pattern-little-stars.webp");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 130px;
 }
 
 body {
     background-color: #f0d0dc;
-
-    .little-stars {
-        background-image: url("img/pattern-little-stars.webp");
-        background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
-    }
 
     header {
         line-height: 6rem;
