@@ -19,40 +19,117 @@
 
 * {
     font-family: "cardo", serif;
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.030rem;
     text-wrap-style: balance;
     text-align: center;
     text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+.little-stars {
+    background-image: url("img/pattern-little-stars.webp");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    min-height: 10vh;
+    height: auto;
+    border: 3px;
+    padding: 1px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 body {
     background-color: #f0d0dc;
 
-    .little-stars {
-        background-image: url("img/pattern-little-stars.webp");
-        background-position: center;
-        background-repeat: repeat;
-        background-size: cover;
-    }
-
     header {
         line-height: 6rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5px;
+    }
+
+    nav {
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: center;
+    }
+
+    .contendor {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        max-width: 1200px;
+        padding: 2px;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     h1 {
         font-family: "dooType-classic", serif;
         font-weight: normal;
         font-size: 5.5rem;
+        border: 3px;
+        padding: 9px;
+        margin: 7px;
+    }
+
+    img {
+        border: 4px;
+        padding: 14px;
+        margin: 7px;
     }
 
     p {
         line-height: 1.6rem;
         text-wrap-style: balance;
+        max-width: 700px;
+        min-width: 300px;
+        border: 3px;
+        padding: 8px;
+        margin: 5px;
     }
 
-    main>p {
-        margin-bottom: 4rem;
+    .secciones {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        text-align: left;
+        width: 100%;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     h2 {
@@ -62,18 +139,46 @@ body {
         line-height: 1rem;
         text-align: left;
         color: #004855;
+        border: 3px;
+        padding: 3;
+        padding-bottom: 13px;
+        padding-top: 50px;
+        margin-left: 3px
     }
 
     ul {
+        list-style: none;
+
         li {
             line-height: 1.6rem;
             text-align: left;
             text-wrap-style: balance;
+            border: 5px;
+            padding-left: 19px;
+            margin-left: 15px;
+            text-decoration: none;
         }
     }
 }
 
 footer {
+    #inmaculate {
+        padding: 1px;
+        margin: 10px;
+        border: #8cc3e3 4px solid;
+        border-radius: 25px;
+        corner-shape: scoop;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 
     h2 {
@@ -83,17 +188,19 @@ footer {
         line-height: 1.5rem;
         text-align: center;
         color: #000000;
+        padding: 3px;
+        padding-top: 10px
     }
 
     ul {
         padding-left: 0;
         text-align: center;
-        list-style: none;
-    }
 
-    ul {
         li {
+            list-style: none;
             text-align: center;
+            padding-left: 0;
+            margin-left: 0;
         }
     }
 
@@ -102,5 +209,9 @@ footer {
         font-weight: 400;
         font-size: 0.7rem;
         font-style: italic;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+
     }
 }
