@@ -21,8 +21,8 @@
     font-family: "cardo", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.030rem;
-    text-wrap-style: balance;
+    font-size: 1.030rem; /*este número es muy rebuscado, simplificá*/
+    text-wrap-style: balance; /*el style no va*/
     text-align: center;
     text-decoration: none;
     margin: 0px;
@@ -167,7 +167,7 @@ footer {
         margin: 10px;
         border: #8cc3e3 4px solid;
         border-radius: 25px;
-        corner-shape: scoop;
+        corner-shape: scoop; /*esto qué está haciendo exactamente?*/
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
