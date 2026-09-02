@@ -21,7 +21,8 @@
     font-family: "cardo", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.030rem;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
     text-wrap-style: balance;
     text-align: center;
     text-decoration: none;
@@ -112,13 +113,17 @@ main {
 /*Intenté hacer lo de la imagen, hasta busqué en internet, pero no pude hacer lo de "flex:1" porque me lo deforma y tengo bien las proporciones de la imagen. Algo que tampoco me aparece como en los videos es ese link que sale de las imagenes en el inspector, busqué también en internet pero no encontré respuesta clara, pero si abría otro panel me mostraba la proprción de la imagen y los valores eran esos que le coloqué en el html*/
 
 h1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    justify-content: center;
     font-family: "dooType-classic", serif;
     font-weight: normal;
-    font-size: 5rem;
+    font-size: 7vw;
     border: 3px;
-    padding: 9px;
-    margin: 7px;
-    margin-bottom: 25px;
+    padding: 1px;
+    margin: 30px;
 }
 
 hgroup {
@@ -126,13 +131,15 @@ hgroup {
     margin-left: 10px;
     flex-wrap: wrap;
     margin-bottom: 7rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .parrafos-intro {
     flex: 1;
     display: flex;
-    max-width: 700px;
-    min-width: 380px;
+    max-width: 470px;
+    min-width: 470px;
     flex-wrap: wrap;
     gap: 50px;
     align-content: center;
@@ -144,13 +151,14 @@ hgroup {
 }
 
 p {
+    font-size: 1.1rem;
     line-height: 1.6rem;
     text-wrap-style: balance;
     max-width: 700px;
     min-width: auto;
     border: 3px;
     padding: 8px;
-    margin: 5px;
+    margin: 10px;
     margin-left: 25px;
     text-align: center;
 }
@@ -178,7 +186,8 @@ p {
         padding: 30px;
         margin: 20px;
         background-color: #f2f5dd;
-        box-shadow: 7px 8px 0px 2px #000000c9;;
+        box-shadow: 7px 8px 0px 2px #000000c9;
+        ;
         border-radius: 25px;
         min-width: 25%;
     }
@@ -190,23 +199,10 @@ p {
     }
 }
 
-h2::before {
-    content: "";
-    background-image: url("img/icono_estrellita_cenicienta.png");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
 h2 {
     font-family: "doo-type-italic-semibold", serif;
     font-weight: normal;
-    font-size: 1.9rem;
+    font-size: 2.1rem;
     line-height: 1rem;
     text-align: center;
     color: #004855;
@@ -214,12 +210,12 @@ h2 {
     padding: 2px;
     margin-bottom: 25px;
     margin-top: 25px;
-    margin-left: 8px
+    margin-left: 8px 
 }
 
 ul {
     li {
-        color:#3d0233;
+        color: #3d0233;
         line-height: 1.6rem;
         text-align: left;
         text-wrap-style: balance;
@@ -247,13 +243,13 @@ h3::before {
 h3 {
     font-family: "doo-type-italic-semibold", serif;
     font-weight: normal;
-    font-size: 1.7rem;
+    font-size: 2.1rem;
     line-height: 1rem;
     text-align: left;
     color: #330055;
     border: 3px;
     padding: 2px;
-    padding-bottom: 13px;
+    padding-bottom: 35px;
     padding-top: 8rem;
     margin-left: 8px;
     width: 100%;
@@ -311,7 +307,8 @@ h4 {
     font-weight: normal;
     font-size: 13vw;
     line-height: 13vw;
-    text-shadow: 0px 0px 10px #1f3ab1;
+    color: #e4e4f0;
+    text-shadow: 4px 3px 8px #0f289b;
     text-align: left;
     border: 3px;
     padding: 9px;
@@ -408,6 +405,7 @@ figure {
     font-family: "cardo", serif;
     color: #424242;
     font-size: 0.8rem;
+    line-height: 1.1rem;
     flex-direction: column;
     align-items: left;
     justify-content: left;
@@ -436,22 +434,12 @@ footer {
     h2 {
         font-family: "dooType-classic", serif;
         font-weight: normal;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         line-height: 1.5rem;
         text-align: center;
         color: #000000;
         padding: 3px;
         padding-top: 10px
-    }
-
-    h2::before {
-        content: "";
-        background-image: none;
-        margin-right: 0;
-        width: 0;
-        height: 0;
-        display: none;
-        margin-top: 0px;
     }
 
     ul {
@@ -460,7 +448,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 20px;
+        gap: 25px;
 
         li {
             list-style: none;
