@@ -3,6 +3,8 @@
 
 /*Hay algo que está fallando con el tema de los márgenes pero no entiendo qué es, a veces la pagina se come una partecita del contendio, pero cierro la ventana y está todo okay, al rato pasa lo mismo, fresco y se ve mal, cierro la pagina la vuelvo a abrir y está bien*/
 
+/*lo importante es que funcione bien desde github pages, por mi parte no veo ese problema*/
+
 @font-face {
     font-family: "dooType-classic";
     src: url("fonts-nuñez-rodrigo-tp1/dooType\ -\ Encorpada\ Classic.otf") format("opentype");
@@ -23,7 +25,7 @@
     font-style: normal;
     font-size: 1.1rem;
     line-height: 2.5rem;
-    text-wrap-style: balance;
+    text-wrap-style: balance; /*no va style, esto es corrección vieja!!*/
     text-align: center;
     text-decoration: none;
     margin: 0px;
@@ -69,10 +71,10 @@ img {
 
 body {
     background-color: #f0d0dc;
-    width: 100%;
-    margin: 0px;
-    padding-left: 0px;
-    overflow-x: hidden;
+    width: 100%; /*raro, en general se aplica este width cuando hay flexbox que lo modifique y tu body no tiene esto*/
+    margin: 0px; /*ya lo declaraste en el * no repitas!*/
+    padding-left: 0px; /*no repitas!*/
+    overflow-x: hidden; /*no deberías por qué utilizar esta propiedad todavía porque es arreglarlo con alambre, fijate que se arregla quitando el width del h3*/
 }
 
 header {
@@ -101,9 +103,9 @@ nav {
     padding: 2px;
 }
 
-main {
+main { /* guarda que muchas de estas propiedades que aplicás no están aplicando cambios*/
     display: flex;
-    align-items: auto;
+    align-items: auto; /*esta propiedad no existe*/
     flex-direction: column;
     align-content: center;
     justify-content: center;
@@ -112,8 +114,10 @@ main {
 
 /*Intenté hacer lo de la imagen, hasta busqué en internet, pero no pude hacer lo de "flex:1" porque me lo deforma y tengo bien las proporciones de la imagen. Algo que tampoco me aparece como en los videos es ese link que sale de las imagenes en el inspector, busqué también en internet pero no encontré respuesta clara, pero si abría otro panel me mostraba la proprción de la imagen y los valores eran esos que le coloqué en el html*/
 
+/*puede ser por el navegador, en general está bueno trabajar con chrome que tiene esas opciones, y después usar otros para revisar  cómo se ve el contenido*/
+
 h1 {
-    display: flex;
+    display: flex; /*las propiedades de flex se aplican únicamente a cajas contenedoras de más de un elemento y no a textos*/
     flex-wrap: wrap;
     align-content: center;
     flex-direction: row;
@@ -136,10 +140,10 @@ hgroup {
 }
 
 .parrafos-intro {
-    flex: 1;
+    flex: 1; /*no produce cambios*/
     display: flex;
     max-width: 470px;
-    min-width: 470px;
+    min-width: 470px; /*esto es un problema porque impedís que se achique en una pantalla por ej de celular, y poniendo el mísmo límite del máximo estás haciendo lo mismo que una medida fija*/
     flex-wrap: wrap;
     gap: 50px;
     align-content: center;
@@ -153,7 +157,7 @@ hgroup {
 p {
     font-size: 1.1rem;
     line-height: 1.6rem;
-    text-wrap-style: balance;
+    text-wrap-style: balance; /*!!!!*/
     max-width: 700px;
     min-width: auto;
     border: 3px;
@@ -167,11 +171,11 @@ p {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: stretch;
-    align-content: center;
-    text-align: left;
-    width: 100%;
+    justify-content: space-evenly; /*guarda con esta propiedad porque en pantallas muy grandes te hace espacios confusos, mejor usar gap y que esto esté centrado*/
+    align-items: stretch; /*no funciona*/
+    align-content: center; /*no funciona*/
+    text-align: left; /*no funciona*/
+    width: 100%; 
 
     section {
         display: flex;
@@ -182,7 +186,7 @@ p {
         background-position: center;
         background-repeat: repeat;
         background-size: 50%;
-        width: 35%;
+        width: 35%; /*este ancho te va a traer problemas a futuro con mobile porque no es el mismo el 35% de una compu que el de un celular, acá sí va max-width*/
         padding: 30px;
         margin: 20px;
         background-color: #f2f5dd;
@@ -193,7 +197,7 @@ p {
     }
 
     ul {
-        display: flex;
+        display: flex; /*no genera cambios nada de flex*/
         flex-direction: column;
         align-items: flex-start;
     }
@@ -204,13 +208,13 @@ h2 {
     font-weight: normal;
     font-size: 2.1rem;
     line-height: 1rem;
-    text-align: center;
+    text-align: center; /*guarda que estás centrando todos los h2 pero en el resultado final no tenés nada centrado por la forma en que aplicás flex, acá hay una contradicción*/
     color: #004855;
     border: 3px;
     padding: 2px;
     margin-bottom: 25px;
     margin-top: 25px;
-    margin-left: 8px 
+    margin-left: 8px  /*falta cerrar!*/
 }
 
 ul {
@@ -218,7 +222,7 @@ ul {
         color: #3d0233;
         line-height: 1.6rem;
         text-align: left;
-        text-wrap-style: balance;
+        text-wrap-style: balance; /*!!!!*/
         border: 5px;
         padding-left: 19px;
         max-width: 95%;
@@ -251,7 +255,7 @@ h3 {
     padding: 2px;
     padding-bottom: 35px;
     padding-top: 8rem;
-    margin-left: 8px;
+    margin-left: 8px; /*acá el problema es la normalización de las medidas, es decir, si vas a usar paddings y margins con rem o px, no veo mal el rem porque se aplica a algo tipográfico, pero padding y margin comparten tamaño de caja*/
     width: 100%;
 }
 
@@ -264,14 +268,14 @@ h3 {
     align-items: center;
     border-radius: 25px;
     gap: 30px;
-    margin-left: 40px;
+    margin-left: 40px; /*estás usando esta propiedad para centrar, eso está mal*/
     padding: 2px;
 }
 
 .simulador {
     background-image: url(img/ver-mas.gif);
     border-radius: 25px;
-    width: 210px;
+    width: 210px; 
     height: 210px;
     font-family: "dooType-classic", serif;
     font-weight: normal;
@@ -298,7 +302,7 @@ h3 {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    min-width: 300px;
+    min-width: 300px; /*es extraño usar el min-width porque es un límite a lo más pequeño y en general el contenido tiene a estirarse todo lo posible en el espacio, de hecho si lo quito esta propiedad no hace nada*/
     margin-right: 30px;
 }
 
@@ -354,7 +358,7 @@ h4 {
     height: auto;
     border: 3px;
     padding: 1px;
-    margin-left: calc(-20vw + 20%);
+    margin-left: calc(-20vw + 20%); /*por lo que veo esto lo estás usando para quitar los margins, no es más conveniente que el margin sea de cero para no enroscarse?*/
     margin-right: calc(-20vw + 20%);
     margin-top: 5px;
     margin-bottom: 20px;
@@ -364,7 +368,7 @@ p {
     line-height: 1.6rem;
     text-wrap-style: balance;
     max-width: 700px;
-    min-width: auto;
+    min-width: auto; /*mucho min-width usas y no está bien, no debería ser necesario*/
     border: 3px;
     padding: 8px;
     margin: 5px;
@@ -396,7 +400,7 @@ figure {
     margin-left: 30px;
     margin-top: 20px;
     margin-bottom: 5px;
-    gap: px;
+    gap: px; /*no dejes cosas vacías!!*/
 
 }
 
@@ -439,7 +443,7 @@ footer {
         text-align: center;
         color: #000000;
         padding: 3px;
-        padding-top: 10px
+        padding-top: 10px /*falta cerrar!*/
     }
 
     ul {

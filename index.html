@@ -16,16 +16,16 @@
         <div class="contenedor">
             <nav>
                 <a href="#">★Inicio</a>
-                <!-- Pero si hago lista esto, no queda como nav, verdad? no pierde las propiedades de navegabilidad? -->
+                <!-- Pero si hago lista esto, no queda como nav, verdad? no pierde las propiedades de navegabilidad? --> <!--no pierde las propiedades pero es verdad que la sintaxis te va a quedar distinta, obligatoriamente los li van a tener que contener una a y adentro del nav va a quedar la ul por sintaxis tambien, otra opción para no hacer ese choclazo de código es usar la propiedad ::before , es fácil y va a quedar mejor que la lista https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::before -->
                 <a href="#">★Buscar</a>
                 <a href="#">★Tour Dates</a>
                 <a href="#">★Galería</a>
-                <a href="#">★Contacto</a>
+                <a href="#">★Contacto</a> <!--dentro de estos links que ya usas podrías aplicar los ids de las secciones correspondientes por acá, por ej, escribir en el href "inmaculate" va a hacer que la página vaya para abajo, lo que también va a pasar que volver arriba de todo sea un plomo, ahí te toca aplicar creatividad para solucionar el problema-->
             </nav>
         </div>
     </header>
     <main>
-        <h1>Rodrigo Ezequiel Nuñez</h1>
+        <h1>Rodrigo Ezequiel Nuñez</h1> <!--cómo un título va a estar por fuera de una etiqueta que se llama "grupo del título"? -->
         <hgroup>
             <img src="img/rodri.jpg" alt="tu popstar fav" width="470" height="470">
             <div class="parrafos-intro">
@@ -52,7 +52,7 @@
             </div>
         </hgroup>
         <div class="secciones">
-            <!--todavía no veo el por qué del uso de este div más que agrupar todo lo que no es título, capaz es más fácil agrupar lo anterior o pensaste algo de flexbox que todavía no está aplicado, si es tu intención usarlo más adelante dejalo-->
+            <!--todavía no veo el por qué del uso de este div más que agrupar todo lo que no es título, capaz es más fácil agrupar lo anterior o pensaste algo de flexbox que todavía no está aplicado, si es tu intención usarlo más adelante dejalo--> <!--lo resolviste muy bien!-->
             <section>
                 <h2>Experiencia</h2>
                 <ul>
@@ -125,7 +125,7 @@
 
         <section id="entrevista-rodri-poise">
             <h3> Nota exclusiva</h3>
-            <!--Nota reportaje, simulando a las de las revistas. La idea de esto es que contenga bastante texto, pero si es muy largo y me paso avisame!!!-->
+            <!--Nota reportaje, simulando a las de las revistas. La idea de esto es que contenga bastante texto, pero si es muy largo y me paso avisame!!!--> <!--para saber si es largo preguntate si otra persona leería y scrollearía todo esto-->
 
             <hgroup class="pista-background">
                 <h4>La Ética de la Pista de Baile</h4>
@@ -335,7 +335,7 @@
                 gente que me rodea y sobre todo a mi mismo. Estuve descubriendo un montón de cosas. Por ejemplo
                 lugares fabulosos, pelis fantásticas [es muy fan de los films], libros interesantes, música
                 maravillosa y mucha gente divina, real sobre todo, que me aprecia y que aprecio mucho como... <a
-                    href="https://drive.google.com/file/d/1JKfPF7yevcfzk4Kt06rVzSaNz2OP4fhD/view?usp=sharing"> para leer la entrevista completa en la página de Poise hace click acá</a></p>
+                    href="https://drive.google.com/file/d/1JKfPF7yevcfzk4Kt06rVzSaNz2OP4fhD/view?usp=sharing"> para leer la entrevista completa en la página de Poise hace click acá</a></p> <!--no te olvidesd del target blank!-->
 
         </section>
 
