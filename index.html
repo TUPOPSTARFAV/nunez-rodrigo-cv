@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>nuñez-rodrigo-TP1</title>
     <link rel="stylesheet" href="styles-tp1-nuñez-rodrigo.css">
+    <link rel="icon" type="image/png" href="img/icono_estrellita_fucsia.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
     </style>
@@ -14,37 +15,49 @@
     <header class="little-stars">
         <div class="contenedor">
             <nav>
-                <a href="#">★Inicio</a> <!-- para que quede más prolijo a nivel sintaxis podés convertir esto en una lista y personalizar la estrella desde css con la propiedad list-style-type: "✨ "; por ejemplo, entre comillas podés escribir el bullet que quieras -->
-                <a href="#">★Exp. Laboral</a>
-                <a href="#">★Conocimientos</a>
-                <a href="#">★Habilidades</a>
-                <a href="#">★Educación</a>
-                <a href="#">★Contacto</a>
+                <a href="#">★Inicio</a>
+                <!-- Pero si hago lista esto, no queda como nav, verdad? no pierde las propiedades de navegabilidad? -->
                 <a href="#">★Buscar</a>
+                <a href="#">★Tour Dates</a>
+                <a href="#">★Galería</a>
+                <a href="#">★Contacto</a>
             </nav>
         </div>
     </header>
     <main>
-        <h1>Rodrigo Ezequiel Nuñez</h1> <!--es raro que toda esta información no esté contenida por una etiqueta más grande, como una section, te va a complicar más adelante cuando empieces a aplicar flex, también existe la etiqueta hgroup-->
-        <img src="img/rodri.jpg" alt="tu popstar fav" width="470" height="470">
-        <!--yo sé que la imagen debería ir en la parte de header pero no me gustaba como quedaba ahí al principio, entonces preferí moverla al main debajo de mi nombre.-->
-        <p>¡Hola! Soy Rodrigo, pero todos me dicen rodri. Soy estudiante de la Licenciatura en Diseño y Comunicación
-            Visual
-            en la Universisad <!--me parece muy gracioso universiSAD, igual arreglalo--> Nacional de Lanús. Soy un apasionado del diseño, la comunicación y la cultura pop. Me
-            inspiran
-            los colores, la moda, la música y las películas para crear ideas y proyectos audiovisuales que conecten con
-            el
-            público.
-            También disfruto cocinar, explorar nuevos sabores y combinar creatividad y funcionalidad, comprometerme con
-            lo que hago y buscar siempre crecer, aprender y dar lo mejor de mí. No me
-            conformo con hacer las cosas de manera superficial: valoro la dedicación, la práctica y la mejora
-            constante.
-        </p> <!--mucho texto para un párrafo de una introducción, capaz podés separarlo en dos párrafos para evitar la carga cognitiva-->
-        <div class="secciones"> <!--todavía no veo el por qué del uso de este div más que agrupar todo lo que no es título, capaz es más fácil agrupar lo anterior o pensaste algo de flexbox que todavía no está aplicado, si es tu intención usarlo más adelante dejalo-->
+        <h1>Rodrigo Ezequiel Nuñez</h1>
+        <hgroup>
+            <img src="img/rodri.jpg" alt="tu popstar fav" width="470" height="470">
+            <div class="parrafos-intro">
+                <p>¡Hola! Soy Rodrigo, pero todos me dicen rodri. Soy estudiante de la
+                    Licenciatura en Diseño y Comunicación
+                    Visual
+                    en la Universidad Nacional de Lanús. Soy un
+                    apasionado del diseño, la comunicación y la cultura pop. Me
+                    inspiran
+                    los colores, la moda, la música y las películas para crear ideas y proyectos audiovisuales que
+                    conecten
+                    con
+                    el
+                    público.
+                </p>
+                <p>
+                    También disfruto cocinar, explorar nuevos sabores y combinar creatividad y funcionalidad,
+                    comprometerme
+                    con
+                    lo que hago y buscar siempre crecer, aprender y dar lo mejor de mí. No me
+                    conformo con hacer las cosas de manera superficial: valoro la dedicación, la práctica y la mejora
+                    constante.
+                </p>
+            </div>
+        </hgroup>
+        <div class="secciones">
+            <!--todavía no veo el por qué del uso de este div más que agrupar todo lo que no es título, capaz es más fácil agrupar lo anterior o pensaste algo de flexbox que todavía no está aplicado, si es tu intención usarlo más adelante dejalo-->
             <section>
-                <h2>★ Experiencia Laboral</h2>
+                <h2>Experiencia</h2>
                 <ul>
-                    <li>Auxiliar Docente de la materia Comunicación de la carrera Diseño y Comunicación Visual de UNLa
+                    <li>Auxiliar Docente de la materia Comunicación de la carrera Diseño y Comunicación Visual de
+                        UNLa
                         (2025-presente)</li>
                     <li>Organizador de Eventos Multitudinarios (2022-2023; 2024-presente)</li>
                     <li>Gestor y Técnico de Proyectos Audiovisuales (2020-presente)</li>
@@ -52,10 +65,9 @@
                 </ul>
             </section>
             <section>
-                <h2>★ Conocimientos</h2>
+                <h2>Conocimientos</h2>
                 <ul>
                     <li> Nivel de Inglés Avanzado</li>
-                    <li>Manejo de Adobe Creative Cloud</li>
                     <li>Adobe InDesign</li>
                     <li>Adobe Photoshop</li>
                     <li>Adobe Illustrator</li>
@@ -69,29 +81,266 @@
                 </ul>
             </section>
             <section>
-                <h2>★ Habilidades</h2>
+                <h2>Habilidades</h2>
                 <ul>
                     <li>Comunicación bilingüe efectiva</li>
                     <li>Trabajo en equipo</li>
                     <li>Resolución de problemas</li>
                     <li>Creatividad</li>
+                    <li>Resistencia en la pista de baile</li>
                     <li>Adaptabilidad</li>
                     <li>Liderazgo</li>
                     <li>Gestión del tiempo</li>
+                    <li>Pensamiento lateral</li>
+                    <li>Buena predisposicón</li>
             </section>
             <section>
                 </ul>
-                <h2>★ Educación</h2>
+                <h2>Formación</h2>
                 <ul>
                     <li>Licenciatura en Diseño y Comunicación Visual - Universidad Nacional de Lanús (2021-Presente)
                     </li>
+                    <li>Certificado de seis niveles de Inglés - Instituto de Cultura Inglesa de Remedios de Escalada
+                        (2019-2023)</li>
                     <li> Bachillerato en Ciencias Sociales - Colegio San Francisco Javier (2015-2020)</li>
-                    <!--Me gustaría poner los cursos que hice o el instituto de inglés al que fui, pero no siento que en jerarquía sean tan importantes como la universidad o la escuela y si hago otro apartado siento que queda todo muy cargado, dónde podría poner esa información? o es preferible omitirla?-->
-                    <!--esto puede ser parte de cursos y certificaciones, inglés sí me parece algo principal para poner acá-->
                 </ul>
             </section>
         </div>
+
+        <h3> Galería de fotos</h3>
+        <section id="galeria-de-fotos">
+            <img src="img/de-abajo.jpg" alt="atendiendo al demonio bajo la lluvia" width="210" height="210">
+            <img src="img/popstar.JPG" alt="remerita popstar" width="210" height="210">
+            <img src="img/icono.jpeg" alt="en el quimera tour amor" width="210" height="210">
+            <img src="img/besito.JPG" alt="besito a la cámara" width="210" height="210">
+            <img src="img/cute.jpeg" alt="re cutie bajo la lluvia" width="210" height="210">
+            <img src="img/cumple.jpeg" alt="mi cumple pasado, pendejita de 23 amor" width="210" height="210">
+            <img src="img/pose.JPG" alt="dandolo todo en la pista como siempre" width="210" height="210">
+            <img src="img/slay.jpeg" alt="de casualidad encontré la ventana y el banco que combinaban conmigo"
+                width="210" height="210">
+            <a href="https://www.instagram.com/fleursjaunes_?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+                        target="_blank" class="simulador">Ver Más</a>
+        </section>
+
+
+        <section id="entrevista-rodri-poise">
+            <h3> Nota exclusiva</h3>
+            <!--Nota reportaje, simulando a las de las revistas. La idea de esto es que contenga bastante texto, pero si es muy largo y me paso avisame!!!-->
+
+            <hgroup class="pista-background">
+                <h4>La Ética de la Pista de Baile</h4>
+
+                <!--Copete -->
+                <p class="copete_centrado"> <strong>Después de casi dos años volvemos a los iconos. En esta nueva
+                        nota exclusiva para <em>Poise Magazine</em>, rodri, nuestra popstar fav, nos cuenta su
+                        devoción por la nueva ética que rige su vida, proyectos y vínculos: <em>Everybody get up and
+                            dance! </em></strong> </p>
+            </hgroup>
+
+            <!--Texto que voy a ir jerarquizando en distintos parrafos, hago esta única aclaración solo en este para no repetirlo 40 veces-->
+            <p class="subtitulos-de-nota"> El reencuentro</p>
+
+            <p><strong>poise:</strong> Hola rodri, ¿cómo estás? Hace mucho que no nos veíamos, ¿qué tal todo? Me
+                gusta tu outfit [Lleva puesta una camiseta manga corta de las chicas superpoderosas, es color blanca
+                con mangas rosa furioso, acompaña con una campera de los mismos colores con una pequeña lunita en el
+                pecho, un jean oxford azul oscuro le acentúa la silueta y para completar el look unas zapatillas
+                blancas altas; su cabello impoluto, lacio y brillante]</p>
+
+            <p><strong>rodri:</strong> Hola, buenas tardes. Gracias, estoy intentando volver al rosa, lo tenía
+                bastante abndonado, en especial ahora que hay tanta masculización forzada en todos lados, hay que
+                abrzar lo real, no la pose. —Se acomoda en la silla y sonrie—. Ahora ustedes también están en la
+                digitalidad, en el mundo virtual —dice, abriendo los ojos
+                de
+                manera sarcástica, muy fiel a su estilo —. ¿Ya nadie lee revistas en físco? Perdón, me corrijo: ¿ya
+                nadie lee nada en físico? Yo soy de la vieja escuela. Me gusta que las cosas sean reales, tangibles,
+                que
+                se puedan tocar y sentir. Por eso, aunque me encanta la tecnología y las redes sociales, sigo
+                prefiriendo los libros, los discos y las revistas en físico. Me gusta ser dueño de las cosas, o al
+                menos
+                sentirme así.
+
+            <p><strong>poise:</strong> Te veo muy bien, la última entrevista que tuvimos fue hace casi dos años, más
+                o menos por estas fechas, ¿Te acordás?
+
+            <p><strong>rodri:</strong> Gracias. Sí, claro que me acuerdo. Fue en la primer portada que hice para la
+                revista, en ese momento en papel, cuando la gente no tenía conversaciones con inteligencias
+                artificiales, ahora estamos en la nube, en el ciberespacio, somos todos un concepto...
+                <em>farmeamos aura</em> —dice, girando los ojos y haciendo una mueca se rie—. Fue un
+                momento muy especial para mí, y me alegra que lo recuerdes. Venía de estar muy en una, pero como ya
+                sabés aprendí un montón de cosas y como que transmuté todo lo malo en algo positivo, lo metabolicé
+                para
+                bien.
+
+            <p><strong>poise:</strong> ¿Y qué estuviste haciendo desde entonces?</p>
+
+            <p><strong>rodri:</strong> Me ofende un poco tu pregunta porque estuve apareciendo en todos lados, pero
+                la
+                voy a tomar de manera retórica. O sea, sin ir más lejos tuve tres #1* [en total acumula siete]. Pero
+                respondiendote, desde entonces estuve trabajando en
+                nuevos proyectos y explorando nuevas formas de expresión artística. La pista de baile es mi pasión,
+                pero
+                ya saben que
+                me interesa el diseño, la moda, la cocina, las películas y la cultura pop en general. Me gusta estar
+                siempre
+                aprendiendo y
+                creciendo como artista y por supuesto como persona también. Además, ¿¡qué se hacen los boludos si
+                ustedes estuvieron publicando mis editoriales!? —suelta una cacajada estridenete y bebe un sorbo de
+                agua, ahora en su nueva botella de Hello Kitty, reemplazando a la de las princesas de la primera
+                entrevista—.
+                <em>*el conecpto de #1 en una carrera universitaria es referido a las materias que se promocionan
+                    con
+                    nota
+                    final 10.</em>
+            </p>
+
+            <p><strong>poise:</strong> Nosotros si sabemos qué estuviste haciendo, pero el público se renueva y
+                capaz
+                algún que otro despistado te perdió un poquito el hilo.</p>
+
+            <p><strong>rodri:</strong> Sí, es cierto. Pero no me preocupa demasiado, porque sé que mi público es
+                fiel y
+                siempre me acompaña. Además, estoy muy contento con los nuevos fans que se sumaron a mi comunidad.
+                Me
+                encanta poder compartir mi música y mi arte con ellos y ver cómo se conectan con lo que hago. Es una
+                sensación increíble. <em>Love sensation, good vibration, love sensation...</em></p>
+
+
+            <figure>
+                <img src="img/recetario.jpg" alt="recetario ´Celebration:Microhistorias a través de mi cocina´"
+                    width="440" height="311">
+                <figcaption class="epigrafe-de-entrevista">Desde junio ya se encuentra disponible el recetario
+                    "Celebration:
+                    Microhistorias a través de mi cocina" con algunas de las recetas más famosas del entrevistado
+                    (editorial
+                    poise editions)</figcaption>
+            </figure>
+            <p class="subtitulos-de-nota"> El amor por una referente</p>
+
+            <p><strong>poise:</strong> Obviamente ya escuchaste <em>Confessions II</em> ¿Qué te pareció? </p>
+
+            <p><strong>rodri:</strong> Imaginate que me fui hasta Av. Córdoba solo a las ocho de la mañana a robarme
+                un
+                cartel de Madonna —se rie y se cubre la boca con la mano—. Fue el día del partido contra Inglaterra,
+                entonces como que no le importó mucho a la gente verme caminar con una trincheta en la mano y un
+                cartel de 1 metro x 70. ¡Las cosas que hago por amor! El disco me
+                pareció alucinante, muy completo, más confesada que en el primero. Tiene de todo, están todas las
+                Madonnas de todas las épocas, es un disco muy introspectivo porque recorre toda su vida y
+                trayectoria,
+                habla de cosas de las que ella nunca habló, tiene canciones para todo. Estaba asustado con el disco
+                y al
+                mismo tiempo le tenía muchas expectativas. </p>
+
+            <p><strong>poise:</strong> ¿Asustado? ¿Por Qué?</p>
+
+            <p><strong>rodri:</strong> ¡Porque es Madonna! No hay nadie a quien admire más, ella me acompaña desde
+                hace
+                muchos, muchos años, (desde los doce) y viste cuando sos adolescente como que vivís los fanatismos
+                con más pasión. No me tocaron grandes épocas artísticas de ella entonces con todo lo de este disco
+                decía "qué paja,
+                le van a romper los ovarios otra vez, no tiene que demostrarle nada a nadie" y la critica siempre
+                fue muy mala con ella, terriblemente cruel,
+                y para mi leer todo eso es como que te bardeen a tu mamá, no está bueno.</p>
+
+            <p><strong>poise:</strong> Me parece que tenes una relación parasocial con Madonna.</p>
+
+            <p><strong>rodri:</strong> Sí, la verdad que sí. Tengo una relación parasocial con ella. Hay gente que
+                la
+                tiene con Messi, otros con Taylor Swift, yo la tengo con Madonna.</p>
+
+            <p><strong>poise:</strong> ¿Qué es lo que más te gustó del disco?</p>
+
+            <p><strong>rodri:</strong> Me gusta mucho que Stuart Price esté de vuelta como productor. También la
+                última
+                frase de <em>Everything</em> porque conecta con toda la esencia de <em>Love Sensation</em>. Amé
+                <em>L.E.S Girl</em>, me parece de las canciones más lindas que compuso Madonna, lo mismo con <em>One
+                    Step Away</em>, me parece que contiene verdades de la vida, de la existencia. Me inspira que
+                ella
+                siendo una mujer de casi 70 años todavía quiera seguir de joda, divirtiendose, pasandola bien. Tiene
+                ganas de vivir, eso me parece admirable de cualquier ser humano en el presente y más de alguien que
+                las
+                pasó todas como ella. Ella siempre fue fiel a lo creía, incluso cuando todos le decían que estaba
+                equivocada
+                o
+                intentaban humillarla, pero el tiempo le dio la razón. La admiro por eso hoy, pero hay muchos otros motivos.
+            </p>
+            <figure>
+                <img src="img/revis_2024.png" alt="revista poise noviembre 2024" width="389" height="551">
+                <figcaption class="epigrafe-de-entrevista">Portada de rodri para Poise, edición noviembre 2024 (la más
+                    vendida de nuestras ediciones físicas)</figcaption>
+            </figure>
+
+            <p class="subtitulos-de-nota"> Una filosofía bailable</p>
+            <p><strong>poise:</strong> ¿Qué es <em>La ética de la pista de baile</em>?</p>
+
+            <p><strong>rodri:</strong> Es un concepto que me inventé el cuatrimestre pasado y que tiene que ver con
+                la
+                idea de que la pista de baile es un espacio sagrado (como menciona madonna en uno de los tracks del
+                nuevo álbum). La gente piensa que me drogo, pero es irónico que ni siquiera probé los cigarrillos de
+                tabaco. Todas estas ideas surgen espontáneas, lo juro.—Hace una pequeña pausa y agrega entre
+                pequeñas risas y una mueca de <em>"no entiendo"</em>— Debe ser mi aura de superestrella, de rock
+                star, porque <em>el rock es una cuestión de actitud</em>. En fin,
+                estabamos en clases de ética con la maravillosa Adelaida (adelaida te adoro) y me puse a analizar
+                las éticas que nos dieron en clase (Aristóteles, Kant, el funcionalismo, etc) y pensé en que cada
+                una tenía lo suyo, pero ninguna me terminaba de completar, entonces me puse a filosofar en mi mente
+                sobre el tema y dije <em>"mi ética es la de la pista de la baile porque sirve como metáfora de la
+                    vida"</em>.
+                Es como la vez número veinte mil que digo la palabra <em>"vida"</em> en la entrevista, perdón.
+                Parezco Rosalía cuando habla de Dios.</p>
+
+            <p><strong>poise:</strong> ¿Y en qué consiste esa ética?</p>
+
+            <p><strong>rodri:</strong> Consiste en que la pista de baile es, como dije, una metáfora de la vida. O
+                sea,
+                cuando vas a bailar no sabes qué canción va a seguir, capaz es una que no te gusta mucho, una que no
+                conoces o puede ser una que te encante y que te sepas hasta la coreo, lo importante es que estás ahí
+                con
+                buena onda, dandolo todo, divirtiendote, pasandola bien. Puede ser que venga uno a encararte, a
+                querer
+                sacarte de tu trance ritualistico, pero está en vos cortarle menos diez y darle entidad o no.
+                También
+                hay
+                momentos de descanso en la pista, donde vas a tomar algo, te sentas, vas al baño a peinarte o a dar
+                una
+                vueltita por ahí a ver qué onda. También puede pasar que vos re estás dandolo todo ahí pero los que
+                te
+                acompañaron necesitan sentarse un ratito, incluso habrá alguno que se quiera ir, y está bien, hay
+                que
+                dejar a la gente hacer lo que siente, pero no pegues tu deseo al del otro, si vos querés bailar
+                entonces
+                bailá. <em>Express yourself, don't repress yourself.</em></p>
+
+            <p><strong>poise:</strong> ¿Esa es la guía moral y ética con la que vivís hoy?</p>
+
+            <p><strong>rodri:</strong> Sí. Incluso habrá veces que nadie quiera ir a la pista con vos y si tenes
+                muchas
+                ganas de estar ahí ¿por qué te lo perderías por los demás? Hoy esa ética rige mi vida: no importa
+                qué
+                esté haciendo o qué esté pasando alrededor, voy a hacer todo con ganas, energía, onda, no voy a dar
+                más
+                de lo que recibo, la reciprocidad es muy importante, eso aprendí con el tiempo. No quiero ni voy a
+                parar
+                por nada ni por nadie. lo más importante de <em>"seguir bailando"</em> es que, aunque sea dificil y
+                no
+                me fascine (como programar) siempre voy a intentar
+                divertirme, aprender y pasarla bien con lo que esté haciendo. Y por supuesto siempre dando lo mejor,
+                hacer un buen trabajo con el que me sienta conforme, si hay algo que detesto es la mediocridad. Hoy
+                parece que a nadie le importa nada, pero a mi si me importan las cosas. </p>
+
+            <p><strong>poise:</strong> Eso es genial, te felicito. Capaz ahora en Poise nos convertimos en tus DJs
+                ¿Qué otras cosas estuviste descubriendo?</p>
+
+            <p><strong>rodri:</strong> Pareces un psicólogo felicitandome así —se ríe y se acomoda en la silla,
+                luego bebe otro sorbo de agua—. Cuando quieran pueden ser mis <em>Mister DJ</em>; Este tiempo fue un
+                completo <em>glow-up</em> mental, laboral y social. Le digo gracias a la vida, al universo, a la
+                gente que me rodea y sobre todo a mi mismo. Estuve descubriendo un montón de cosas. Por ejemplo
+                lugares fabulosos, pelis fantásticas [es muy fan de los films], libros interesantes, música
+                maravillosa y mucha gente divina, real sobre todo, que me aprecia y que aprecio mucho como... <a
+                    href="https://drive.google.com/file/d/1JKfPF7yevcfzk4Kt06rVzSaNz2OP4fhD/view?usp=sharing"> para leer la entrevista completa en la página de Poise hace click acá</a></p>
+
+        </section>
+
     </main>
+
     <footer class="little-stars">
         <div id="inmaculate">
             <h2>Contacto</h2>
