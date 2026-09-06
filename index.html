@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>nuñez-rodrigo-TP1</title>
-    <link rel="stylesheet" href="styles-tp1-nuñez-rodrigo.css">
+    <link rel="stylesheet" href="styles-tp1-nunez-rodrigo.css">
     <link rel="icon" type="ico" href="img/favicon.ico">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
@@ -15,18 +15,17 @@
     <header class="little-stars">
         <div class="contenedor">
             <nav>
-                <a href="#">★Inicio</a>
-                <!-- Pero si hago lista esto, no queda como nav, verdad? no pierde las propiedades de navegabilidad? --> <!--no pierde las propiedades pero es verdad que la sintaxis te va a quedar distinta, obligatoriamente los li van a tener que contener una a y adentro del nav va a quedar la ul por sintaxis tambien, otra opción para no hacer ese choclazo de código es usar la propiedad ::before , es fácil y va a quedar mejor que la lista https://developer.mozilla.org/es/docs/Web/CSS/Reference/Selectors/::before -->
-                <a href="#">★Buscar</a>
-                <a href="#">★Tour Dates</a>
-                <a href="#">★Galería</a>
-                <a href="#">★Contacto</a> <!--dentro de estos links que ya usas podrías aplicar los ids de las secciones correspondientes por acá, por ej, escribir en el href "inmaculate" va a hacer que la página vaya para abajo, lo que también va a pasar que volver arriba de todo sea un plomo, ahí te toca aplicar creatividad para solucionar el problema-->
+                <a href="#">Inicio</a>
+                <a href="#">Tour Dates</a>
+                <a href="#galeria-de-fotos">Galería</a>
+                <a href="#entrevista-rodri-poise">Nota Exclusiva</a>
+                <a href="#inmaculate">Contacto</a> 
             </nav>
         </div>
     </header>
     <main>
-        <h1>Rodrigo Ezequiel Nuñez</h1> <!--cómo un título va a estar por fuera de una etiqueta que se llama "grupo del título"? -->
         <hgroup>
+             <h1>Rodrigo Ezequiel Nuñez</h1>
             <img src="img/rodri.jpg" alt="tu popstar fav" width="470" height="470">
             <div class="parrafos-intro">
                 <p>¡Hola! Soy Rodrigo, pero todos me dicen rodri. Soy estudiante de la
@@ -52,7 +51,6 @@
             </div>
         </hgroup>
         <div class="secciones">
-            <!--todavía no veo el por qué del uso de este div más que agrupar todo lo que no es título, capaz es más fácil agrupar lo anterior o pensaste algo de flexbox que todavía no está aplicado, si es tu intención usarlo más adelante dejalo--> <!--lo resolviste muy bien!-->
             <section>
                 <h2>Experiencia</h2>
                 <ul>
@@ -68,7 +66,7 @@
                 <h2>Conocimientos</h2>
                 <ul>
                     <li> Nivel de Inglés Avanzado</li>
-                    <li>Adobe InDesign</li>
+                    <li>Adobe In Design</li>
                     <li>Adobe Photoshop</li>
                     <li>Adobe Illustrator</li>
                     <li>Edición de Video</li>
@@ -110,23 +108,23 @@
         <h3> Galería de fotos</h3>
         <section id="galeria-de-fotos">
             <img src="img/de-abajo.jpg" alt="atendiendo al demonio bajo la lluvia" width="210" height="210">
-            <img src="img/popstar.JPG" alt="remerita popstar" width="210" height="210">
+            <img src="img/popstar.jpg" alt="remerita popstar" width="210" height="210">
             <img src="img/icono.jpeg" alt="en el quimera tour amor" width="210" height="210">
-            <img src="img/besito.JPG" alt="besito a la cámara" width="210" height="210">
+            <img src="img/besito.jpg" alt="besito a la cámara" width="210" height="210">
             <img src="img/cute.jpeg" alt="re cutie bajo la lluvia" width="210" height="210">
             <img src="img/cumple.jpeg" alt="mi cumple pasado, pendejita de 23 amor" width="210" height="210">
             <img src="img/pose.JPG" alt="dandolo todo en la pista como siempre" width="210" height="210">
             <img src="img/gaze.jpeg" alt="sirviendo mirada de galán" width="210" height="210">
             <img src="img/slay.jpeg" alt="de casualidad encontré la ventana y el banco que combinaban conmigo"
                 width="210" height="210">
-            <a href="https://www.instagram.com/fleursjaunes_?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+            <a href="https://www.instagram.com/fleursjaunes_?utm_source=ig_web_button_share_sheet&igsi=zdn1zdc0mzixnw=="
                         target="_blank" class="simulador">Ver Más</a>
         </section>
 
 
         <section id="entrevista-rodri-poise">
             <h3> Nota exclusiva</h3>
-            <!--Nota reportaje, simulando a las de las revistas. La idea de esto es que contenga bastante texto, pero si es muy largo y me paso avisame!!!--> <!--para saber si es largo preguntate si otra persona leería y scrollearía todo esto-->
+            <!--Nota reportaje, simulando a las de las revistas--> 
 
             <hgroup class="pista-background">
                 <h4>La Ética de la Pista de Baile</h4>
@@ -320,7 +318,7 @@
                 más
                 de lo que recibo, la reciprocidad es muy importante, eso aprendí con el tiempo. No quiero ni voy a
                 parar
-                por nada ni por nadie. Ojo, que la vida sea una pista de baile no signfica que sea un viva la pepa constante, no significa que todo sea puro "ello". También uno puede estar asustado y tener miedo, lo más importante es no parar, <em>"seguir bailando"</em>. En lo personal, aunque una situación sea dificil y
+                por nada ni por nadie. Ojo, que la vida sea una pista de baile no signfica que sea un viva la pepa constante, no significa que todo sea puro <em>"ello"</em>. También uno puede estar asustado y tener miedo, lo más importante es no parar, <em>"seguir bailando"</em>. En lo personal, aunque una situación sea dificil y
                 no
                 me fascine (como programar) siempre voy a intentar
                 divertirme, aprender y pasarla bien con lo que esté haciendo. Y por supuesto siempre dando lo mejor,
@@ -335,7 +333,7 @@
                 completo <em>glow-up</em> mental, laboral y social. Le digo gracias a la vida, al universo, a la
                 gente que me rodea y sobre todo a mi mismo. Estuve descubriendo un montón de cosas. Por ejemplo, lugares fabulosos, pelis fantásticas [es muy fan de los films], libros interesantes, música
                 maravillosa y mucha gente divina, real sobre todo, que me aprecia y que aprecio mucho como... <a
-                    href="https://drive.google.com/file/d/1JKfPF7yevcfzk4Kt06rVzSaNz2OP4fhD/view?usp=sharing"> para leer la entrevista completa en la página de Poise hace click acá</a></p> <!--no te olvidesd del target blank!-->
+                    href="https://drive.google.com/file/d/1JKfPF7yevcfzk4Kt06rVzSaNz2OP4fhD/view?usp=sharing" target="_blank"> para leer la entrevista completa en la página de Poise hace click acá</a></p>
 
         </section>
 
@@ -345,9 +343,10 @@
         <div id="inmaculate">
             <h2>Contacto</h2>
             <ul>
-                <li><a href="https://www.instagram.com/fleursjaunes_?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
-                        target="_blank">🅾 Instagram</a></li>
-                <li><a href="https://boxd.it/asGEJ" target="_blank">📽 Letterboxd</a></li>
+                <li><a href="https://www.instagram.com/fleursjaunes_?utm_source=ig_web_button_share_sheet&igsi=zdn1zdc0mzixnw=="
+                        target="_blank">🅾Instagram</a></li>
+                <li><a href="https://boxd.it/asGEJ" target="_blank">📽Letterboxd</a></li>
+                <li> <a href="#">★Inicio</a></li>
             </ul>
             <p>© 2026 Poise Editions. Todos los derechos reservados.</p>
         </div>
