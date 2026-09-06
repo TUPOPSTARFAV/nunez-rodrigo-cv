@@ -34,6 +34,7 @@
 em {
     font-family: "cardo", serif;
     font-style: italic;
+    line-height: 1.6rem !important;
 }
 
 hgroup p em {
@@ -48,6 +49,7 @@ p a {
 p strong {
     font-family: 'Cardo', serif;
     font-weight: 700;
+    line-height: 1.6rem !important;
 }
 
 img {
