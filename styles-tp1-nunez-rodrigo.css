@@ -1,6 +1,10 @@
 /*CSS DOCUMENT*/
 @charset "UTF-8";
 
+/*Antes de empezar acalro que despúes de la primera correción (esa que fue en persona en la facu) 
+trabajo todo con el inspector de google en 1920x1080 porque mi pantalla es muy chiquita. 
+Las cosas se ven bien así, pero cuando las ajusto en mi pantalla si se juntan un poquito y no quedan óptimas.*/
+
 @font-face {
     .cardo-regular {
         font-family: "Cardo", serif;
@@ -21,12 +25,14 @@
     }
 
 }
+
 @font-face {
     font-family: "bovino";
     src: url(fonts-nunez-rodrigo-tp1/bovino-trialblack.otf) format(truetype);
     font-weight: normal;
     font-size: normal;
 }
+
 @font-face {
     .quattrocento-sans-regular {
         font-family: "Quattrocento Sans", sans-serif;
@@ -54,433 +60,344 @@
 
 }
 
-* {
+p {
     font-family: "cardo", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.1rem;
-    line-height: 2.5rem;
-    text-wrap: balance;
-    text-align: center;
-    text-decoration: none;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+    font-size: 1.43rem;
+    color: #1F010F;
 }
 
-em {
-    font-family: "cardo", serif;
-    font-style: italic;
-    line-height: 1.6rem !important;
-}
-
-hgroup p em {
-    font-weight: bold;
-}
-
-p a {
-    display: inline;
-    text-align: left;
-}
-
-p strong {
-    font-family: 'Cardo', serif;
+h2 {
+    font-family: "Quattrocento Sans", sans-serif;
     font-weight: 700;
-    line-height: 1.6rem !important;
+    font-style: normal;
+    font-size: 2.3rem;
+    color: #1F010F;
 }
-
-img {
-    border-radius: 25px;
-}
-
 
 body {
     background-color: #FFE9FB;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     overflow-x: hidden;
-    /*borré el width de h3 pero la barra sigue apareciendo :c*/
+    box-sizing: border-box;
+
 }
 
+/* HEADER Y NAV */
 header {
-    line-height: 6rem;
+    box-shadow: 6px 13px 0px #F0D3EB;
+
+    .nav {
+        font-family: "Quattrocento Sans", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-izquierda {
+        flex: 1;
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+
+        .header-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #1F010F;
+            border-radius: 50px;
+            padding: 8px 16px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .header-box:hover {
+            background-color: #E71D7A;
+            transform: scale(1.05);
+        }
+    }
+
+    .header-box {
+        color: #E71D7A;
+    }
+
+    .nav-centro {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    .nav-centro a {
+        color: #1F010F;
+        text-decoration: none;
+    }
+
+    .nav-centro a:hover {
+        color: #E71D7A;
+        transform: scale(1.05);
+    }
+
+    .nav-derecha {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+}
+
+.seccion-bienvenida {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    box-sizing: border-box;
+    padding-bottom: 70px;
+}
+
+/*TARJETAS DE BIENVENIDA*/
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.parrafos-intro {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.parrafos-intro p {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5px;
 }
 
 
-nav {
-    display: flex;
-    gap: 40px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: center;
+/* ESTRELLITA GUARDA MOVEDIZA */
 
-
-}
-
-.contendor {
-    display: flex;
-    align-items: center;
+.estrellita-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
-    padding: 2px;
+    overflow: hidden;
+    display: flex;
+    background: transparent;
 }
 
-h1 {
-    font-family: "quattrocento-sans-regular", sans-serif;
+.estrellita-track {
+    display: flex;
+    width: 200%;
+    animation: scrollEstrellita 15s linear infinite;
+}
+
+.estrellita-group {
+    width: 50%;
+    display: flex;
+}
+
+.estrellita-item {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@keyframes scrollEstrellita {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* GALERÍA-INDEX */
+
+.proyectos-index-tarjeton {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+
+.galeria-index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 90px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.galeria-index article {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* El contenedor ahora tiene un ancho del 100% y una proporción cuadrada exacta */
+.galeria-index .contenedor-hover-index {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 👈 Obliga a que la caja sea cuadrada y ocupe todo el ancho de la columna */
+    border-radius: 23px;
+    box-shadow: 9px 10px 20px 3px #c593bd;
+    margin-top: 80px;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+/* Forzamos a la imagen base a cubrir exactamente todo el contenedor */
+.galeria-index .contenedor-hover-index img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 👈 Llena el espacio sin deformarse */
+    display: block;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Imagen del hover cubriendo el contenedor de forma absoluta */
+.galeria-index .contenedor-hover-index img.hover-index {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Efecto hover */
+.galeria-index .contenedor-hover-index:hover img.hover-index {
+    opacity: 1;
+}
+
+.titulo-sub-galeria-index {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding-top: auto;
+}
+
+.titulo-sub-galeria-index h2,
+.titulo-sub-galeria-index p {
+    margin: 0;
+    margin-top: 8px;
+}
+
+.simulador {
+    background-image: url(img/ver-mas.gif);
+    border-radius: 25px;
+    width: 210px;
+    height: 210px;
+    font-family: "dooType-classic", serif;
     font-weight: normal;
-    font-size: 7vw;
+    color: #c70748;
+    text-shadow: 3px 3px 8px white;
+    font-size: 35px;
+    text-align: center;
     border: 3px;
-    padding: 1px;
-    margin: 30px;
+    padding: 9px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: auto;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
+footer {
 
-@-webkit-keyframes scrollbg {
-    0% {
-        background-position: 0
-    }
-
-    to {
-        background-position: -2332px
-    }
-}
-
-@keyframes scrollbg {
-    0% {
-        background-position: 0
-    }
-
-    to {
-        background-position: -2332px
-    }
-
-    hgroup {
-        display: flex;
-        margin-left: 10px;
-        flex-wrap: wrap;
-        margin-bottom: 5rem;
-        align-items: center;
-        justify-content: center;
-    }
-}    
-
-    .parrafos-intro {
-        display: flex;
-        max-width: 27rem;
-        flex-wrap: wrap;
-        gap: 50px;
-        align-content: center;
-        justify-content: center;
-        flex-direction: row;
-        background-image: url(img/poise_little_stars_p1.jpg);
-        margin: 40px;
-        border-radius: 25px;
-    }
-
-    p {
-        font-size: 1.1rem;
-        line-height: 1.6rem;
-        text-wrap: balance;
-        max-width: 700px;
-        min-width: auto;
-        border: 3px;
-        padding: 8px;
-        margin: 10px;
-        margin-left: 25px;
-        text-align: center;
-    }
-
-    .secciones {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        gap: 50px;
-        max-width: 75rem;
-        min-width: 50rem;
-        margin-bottom: 5rem;
-        /*acá tuve que agregarle medidas fijas a los contenedores porque en mi pantalla se veían bien, pero cuando se achicaban, como en tu pantalla por ejemplo, se veían gigantes y la información quedaba chiquita, ahora va todo de la mano.*/
-
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: center;
-            justify-content: center;
-            background-image: url(img/cutie-sparkling.gif);
-            background-position: center;
-            background-size: 50%;
-            max-width: 35%;
-            padding: 30px;
-            margin: 20px;
-            background-color: #f2f5dd;
-            box-shadow: 7px 8px 0px 2px #000000c9;
-            border-radius: 25px;
-            min-width: 25%;
-        }
-    }
 
     h2 {
-        font-family: "doo-type-italic-semibold", serif;
+        font-family: "dooType-classic", serif;
         font-weight: normal;
-        font-size: 2.1rem;
-        line-height: 1rem;
-        text-align: baseline;
-        color: #004855;
-        border: 3px;
-        padding: 2px;
-        margin-bottom: 25px;
-        margin-top: 25px;
-        margin-left: 8px;
+        font-size: 1.8rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #000000;
+        padding: 1px;
+        padding-top: 10px;
     }
 
     ul {
+        padding-left: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 35px;
+
         li {
-            color: #3d0233;
-            line-height: 1.6rem;
-            text-align: left;
-            text-wrap: balance;
-            border: 5px;
-            padding-left: 19px;
-            max-width: 95%;
-            margin-left: 20px;
-            list-style-type: " ✦";
-        }
-    }
-
-    h3::before {
-        content: "";
-        background-image: url("img/icono_estrellita_violetta.png");
-        background-size: 20px 20px;
-        background-position: center;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-right: 4px;
-        vertical-align: middle;
-    }
-
-    h3 {
-        font-family: "doo-type-italic-semibold", serif;
-        font-weight: normal;
-        font-size: 2.1rem;
-        line-height: 1rem;
-        text-align: left;
-        color: #330055;
-        border: 3px;
-        padding: 2px;
-        padding-bottom: 35px;
-        padding-top: 50px;
-        margin-left: 8px;
-    }
-
-    #galeria-de-fotos {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        border-radius: 25px;
-        gap: 30px;
-        margin-left: 1.8rem;
-        margin-bottom: 5rem;
-        padding: 2px;
-    }
-
-    .simulador {
-        background-image: url(img/ver-mas.gif);
-        border-radius: 25px;
-        width: 210px;
-        height: 210px;
-        font-family: "dooType-classic", serif;
-        font-weight: normal;
-        color: #c70748;
-        text-shadow: 3px 3px 8px white;
-        font-size: 35px;
-        text-align: center;
-        border: 3px;
-        padding: 9px;
-        margin-left: 0px;
-        margin-top: 0px;
-        margin-right: auto;
-        padding: 2px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    #entrevista-rodri-poise {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-
-    .copete_centrado {
-        font-family: "cardo", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 4vw;
-        line-height: 1vw;
-        color: rgb(255, 255, 255);
-        text-wrap: balance;
-        text-align: center;
-        max-width: fit-content;
-        text-decoration: none;
-        margin: auto;
-        padding-bottom: 50px;
-        box-sizing: border-box;
-    }
-
-    .copete_centrado strong {
-        font-weight: 400;
-    }
-
-    .copete_centrado em {
-        font-weight: 400;
-        font-style: italic;
-    }
-
-    .pista-background {
-        background-image: url("img/pista.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100vw;
-        min-height: 50vw;
-        height: auto;
-        border: 3px;
-        padding: 1px;
-        margin-left: calc(-20vw + 20%);
-        /*Esto lo intenté con el margin en 0, pero lo dejo así porque lo que intento es que la foto de fondo llegue de extremo a extremo. Si le pongo 0 de margin queda apenitas un espacio de fondo, no llega a cubrir la página entera por un poquitito, pero me da tic*/
-        margin-right: calc(-20vw + 20%);
-        margin-top: 5px;
-        margin-bottom: 20px;
-    }
-
-    p {
-        line-height: 1.6rem;
-        text-wrap: balance;
-        max-width: 700px;
-        border: 3px;
-        padding: 8px;
-        margin: 5px;
-        margin-left: 25px;
-        text-align: left;
-    }
-
-    .subtitulos-de-nota {
-        font-family: "doo-type-italic-semibold", serif;
-        font-weight: normal;
-        font-size: 1.7rem;
-        line-height: 1rem;
-        text-align: left;
-        color: #2e000f;
-        border: 3px;
-        padding: 2px;
-        padding-bottom: 13px;
-        padding-top: 25px;
-        margin-left: 30px
-    }
-
-    figure {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-end;
-        padding: 1px;
-        margin-left: 30px;
-        margin-top: 20px;
-        margin-bottom: 5px;
-        gap: 3px;
-    }
-
-    .epigrafe-de-entrevista {
-        display: flex;
-        font-family: "cardo", serif;
-        color: #424242;
-        font-size: 0.8rem;
-        line-height: 1.1rem;
-        flex-direction: column;
-        align-items: left;
-        justify-content: left;
-        text-align: left;
-        margin-bottom: 20px;
-        margin-left: 15px;
-        max-width: 20%;
-    }
-
-    footer {
-
-        #inmaculate {
-            background-image: url(img/fotter-stars.gif);
-            background-position: center;
-            background-repeat: repeat;
-            margin: 10px auto;
-            padding: 1px;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-        }
-
-        h2 {
-            font-family: "dooType-classic", serif;
-            font-weight: normal;
-            font-size: 1.8rem;
-            line-height: 1.5rem;
+            list-style: none;
             text-align: center;
-            color: #000000;
-            padding: 1px;
-            padding-top: 10px;
-        }
-
-        ul {
             padding-left: 0;
-            text-align: center;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 35px;
-
-            li {
-                list-style: none;
-                text-align: center;
-                padding-left: 0;
-                margin-left: 0;
-            }
-        }
-
-        p {
-            font-family: "cardo", serif;
-            font-weight: 400;
-            font-size: 0.7rem;
-            font-style: italic;
-            text-align: center;
-            align-self: center;
-            width: 100%;
             margin-left: 0;
         }
     }
-    .little-stars {
-        background-image: url(img/icono_estrellita_fucsia.png);
-        background-position: center;
-        background-repeat: repeat;
-        margin: 10px auto;
-        padding: 1px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
+
+    p {
+        font-family: "cardo", serif;
+        font-weight: 400;
+        font-size: 0.7rem;
+        font-style: italic;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        margin-left: 0;
     }
+}
+
+.little-stars {
+    background-image: url(img/icono_estrellita_fucsia.png);
+    background-position: center;
+    background-repeat: repeat;
+    margin: 10px auto;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
