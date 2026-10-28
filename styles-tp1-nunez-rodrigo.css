@@ -260,12 +260,10 @@ header {
     box-sizing: border-box;
 }
 
-/* El contenedor ahora tiene un ancho del 100% y una proporción cuadrada exacta */
 .galeria-index .contenedor-hover-index {
     position: relative;
     width: 100%;
     aspect-ratio: 1 / 1;
-    /* 👈 Obliga a que la caja sea cuadrada y ocupe todo el ancho de la columna */
     border-radius: 23px;
     box-shadow: 9px 10px 20px 3px #c593bd;
     margin-top: 80px;
@@ -273,12 +271,10 @@ header {
     overflow: hidden;
 }
 
-/* Forzamos a la imagen base a cubrir exactamente todo el contenedor */
 .galeria-index .contenedor-hover-index img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* 👈 Llena el espacio sin deformarse */
     display: block;
     margin: 0;
     border-radius: 0;
@@ -286,7 +282,6 @@ header {
     transition: opacity 0.4s ease;
 }
 
-/* Imagen del hover cubriendo el contenedor de forma absoluta */
 .galeria-index .contenedor-hover-index img.hover-index {
     position: absolute;
     top: 0;
@@ -298,7 +293,6 @@ header {
     transition: opacity 0.4s ease;
 }
 
-/* Efecto hover */
 .galeria-index .contenedor-hover-index:hover img.hover-index {
     opacity: 1;
 }
@@ -320,84 +314,29 @@ header {
     margin-top: 8px;
 }
 
-.simulador {
-    background-image: url(img/ver-mas.gif);
-    border-radius: 25px;
-    width: 210px;
-    height: 210px;
-    font-family: "dooType-classic", serif;
-    font-weight: normal;
-    color: #c70748;
-    text-shadow: 3px 3px 8px white;
-    font-size: 35px;
-    text-align: center;
-    border: 3px;
-    padding: 9px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-right: auto;
-    padding: 2px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
 footer {
-
-
-    h2 {
-        font-family: "dooType-classic", serif;
-        font-weight: normal;
-        font-size: 1.8rem;
-        line-height: 1.5rem;
-        text-align: center;
-        color: #000000;
-        padding: 1px;
-        padding-top: 10px;
-    }
-
-    ul {
-        padding-left: 0;
-        text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 35px;
-
-        li {
-            list-style: none;
-            text-align: center;
-            padding-left: 0;
-            margin-left: 0;
-        }
-    }
-
-    p {
-        font-family: "cardo", serif;
-        font-weight: 400;
-        font-size: 0.7rem;
-        font-style: italic;
-        text-align: center;
-        align-self: center;
-        width: 100%;
-        margin-left: 0;
-    }
-}
-
-.little-stars {
-    background-image: url(img/icono_estrellita_fucsia.png);
+    background-image: url(img/footer-poise.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    background-repeat: repeat;
-    margin: 10px auto;
-    padding: 1px;
+    min-height: 323px;
+    padding-top: 30px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+.footer-poise p {
+    font-family: "cardo", serif;
+    color: #F0D3EB;
+    font-weight: 400;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+    align-self: baseline;
+    margin-left: 0;
 }
