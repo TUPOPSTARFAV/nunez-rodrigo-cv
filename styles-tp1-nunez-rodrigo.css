@@ -517,7 +517,7 @@ strong {
 .carrusel {
     position: relative;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .carrusel-contenido {
@@ -684,29 +684,6 @@ strong {
 .info-popstar p {
     color: #FFE9FB;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*FOOTER*/
