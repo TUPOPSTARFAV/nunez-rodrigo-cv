@@ -62,7 +62,6 @@ crema-de-frutilla: #FFE9FB */
         font-weight: 700;
         font-style: italic;
     }
-
 }
 
 p {
@@ -210,15 +209,16 @@ header {
 }
 
 .parrafos-intro p {
+    color:#1F010F;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
 
-/* ESTRELLITA GUARDA MOVEDIZA */
-.estrellita-container {
-    padding-top: 20px;
+/* ESTRELLITA Y GUARDA POISE MOVEDIZAS */
+.movediza-container {
+    padding-top: 30px;
     padding-bottom: 20px;
     width: 100%;
     overflow: hidden;
@@ -226,25 +226,25 @@ header {
     background: transparent;
 }
 
-.estrellita-track {
+.movediza-track {
     display: flex;
     width: 200%;
-    animation: scrollEstrellita 15s linear infinite;
+    animation: scrollMovediza 15s linear infinite;
 }
 
-.estrellita-group {
+.movediza-group {
     width: 50%;
     display: flex;
 }
 
-.estrellita-item {
+.movediza-item {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
 
-@keyframes scrollEstrellita {
+@keyframes scrollMovediza {
     0% {
         transform: translateX(0);
     }
@@ -331,9 +331,183 @@ header {
 
 .titulo-sub-galeria-index h2,
 .titulo-sub-galeria-index p {
+    color:#1F010F;
     margin: 0;
     margin-top: 8px;
 }
+
+
+/*SOBRE NOSOTROS*/
+.sobre-nosotros {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.foto-nosotros {
+    flex: 1;
+    object-fit: cover;
+    display: block;
+}
+
+.nosotros-derecha {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tarjetones-grilla {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tarjetones-grilla > div {
+    padding: 45px;
+    box-sizing: border-box;
+    font-family: "cardo", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*COLORES Y ESTILOS DE LOS TARJETONES*/
+.tarjeton-uno {
+    background-color: #E71D7A;
+}
+
+.tarjeton-uno p {
+    color:#1F010F
+}
+
+.tarjeton-dos p{
+    color: #1F010F;
+ }
+
+.tarjeton-habilidades h2 {
+    color:#E71D7A;
+}
+
+.iconitos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.tarjeton-cuatro {
+    background-color: #1F010F;
+}
+
+.tarjeton-cuatro h2, p, em, strong {
+    color: #FFE9FB;
+}
+
+
+/*CONTACTO*/
+.contacto {
+    display: flex;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.contacto-foto {
+    flex: 1;
+}
+
+.contacto-popstar {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.contacto-derecha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-mixta {
+    width: 100%;
+    margin-bottom: 60px;
+    height: auto;
+    display: block;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+    gap: 50px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item label {
+    font-family: "cardo", serif;
+    font-size: 1.43rem;
+    color: #E71D7A;
+}
+
+.item input,
+.item textarea {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #FFE9FB;
+    border: 1.9px solid #E71D7A;
+    border-radius: 25px;
+    font-family: "cardo", serif;
+    font-size: 1.2rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.item input:focus,
+.item textarea:focus {
+    border-color: #1F010F;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.aclaracion {
+    font-family: "cardo", serif;
+    font-size: 1.1rem;
+    color: #E71D7A;
+}
+
+.boton-enviar {
+    background-color: #FFE9FB;
+    color: #1F010F;
+    border: 1.5px solid #E71D7A;
+    padding: 10px 32px;
+    border-radius: 25px;
+    font-family: "bovino", serif;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #E71D7A;
+    color: #FFE9FB;
+}
+
+
 
 
 /*FOOTER*/
@@ -344,7 +518,6 @@ footer {
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 90px;
-    width: 100%;
 }
 
 .footer-poise {
@@ -418,7 +591,7 @@ footer {
 /*LADO DERECHO FOOTER*/
 .derecha-footer {
     display: flex;
-    padding-top: 60px;
+    padding-top: 90px;
     gap: 50px;
     align-self: center;
     color: #E71D7A;
