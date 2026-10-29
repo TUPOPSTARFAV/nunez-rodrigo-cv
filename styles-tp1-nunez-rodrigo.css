@@ -5,6 +5,11 @@
 trabajo todo con el inspector de google en 1920x1080 porque mi pantalla es muy chiquita. 
 Las cosas se ven bien así, pero cuando las ajusto en mi pantalla si se juntan un poquito y no quedan óptimas.*/
 
+/* colores poise:
+fucsia: #E71D7A
+supernova: #1F010F
+crema-de-frutilla: #FFE9FB */
+
 @font-face {
     .cardo-regular {
         font-family: "Cardo", serif;
@@ -76,6 +81,28 @@ h2 {
     color: #1F010F;
 }
 
+h3 {
+    font-family: "bovino";
+    font-weight: normal;
+    font-size: 6rem;
+    color: #E71D7A;
+}
+
+h4 {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: #1F010F;
+}
+
 body {
     background-color: #FFE9FB;
     margin: 0;
@@ -88,77 +115,73 @@ body {
 
 /* HEADER Y NAV */
 header {
-    box-shadow: 6px 13px 0px #F0D3EB;
+    box-shadow: 0px 14px 20px #F0D3EB;
+}
 
-    .nav {
-        font-family: "Quattrocento Sans", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 15px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 15px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.nav {
+    font-family: "Quattrocento Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .nav-izquierda {
-        flex: 1;
-        display: flex;
-        gap: 10px;
-        justify-content: flex-start;
-
-        .header-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #1F010F;
-            border-radius: 50px;
-            padding: 8px 16px;
-            background-color: transparent;
-            transition: all 0.3s ease;
-        }
-
-        .header-box:hover {
-            background-color: #E71D7A;
-            transform: scale(1.05);
-        }
-    }
+.nav-izquierda {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
 
     .header-box {
-        color: #E71D7A;
-    }
-
-    .nav-centro {
-        flex: 2;
         display: flex;
+        align-items: center;
         justify-content: center;
-        gap: 70px;
+        border: 1px solid #1F010F;
+        border-radius: 50px;
+        padding: 8px 16px;
+        background-color: transparent;
+        transition: all 0.3s ease;
     }
 
-    .nav-centro a {
-        color: #1F010F;
-        text-decoration: none;
-    }
-
-    .nav-centro a:hover {
-        color: #E71D7A;
+    .header-box:hover {
+        background-color: #E71D7A;
         transform: scale(1.05);
     }
+}
 
-    .nav-derecha {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
-        gap: 20px;
-    }
+.nav-centro {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.nav-centro a {
+    color: #1F010F;
+    text-decoration: none;
+}
+
+.nav-centro a:hover {
+    color: #E71D7A;
+    transform: scale(1.05);
+}
+
+.nav-derecha {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
 .seccion-bienvenida {
@@ -194,7 +217,6 @@ header {
 
 
 /* ESTRELLITA GUARDA MOVEDIZA */
-
 .estrellita-container {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -234,7 +256,6 @@ header {
 
 
 /* GALERÍA-INDEX */
-
 .proyectos-index-tarjeton {
     display: flex;
     flex-direction: row;
@@ -314,29 +335,147 @@ header {
     margin-top: 8px;
 }
 
+
+/*FOOTER*/
 footer {
+    box-shadow: 1px -17px 20px #F0D3EB;
     background-image: url(img/footer-poise.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 323px;
-    padding-top: 30px;
     margin-top: 90px;
+    width: 100%;
+}
+
+.footer-poise {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 280px;
+    padding: 40px 60px 20px 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/*LADO IZQUIERDO FOOTER*/
+.izquierda-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.izquierda-footer a {
+    text-decoration: none;
+}
+
+.izquierda-footer h3 {
+    margin: 0;
+    line-height: 1;
+}
+
+.sus-footer {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 24px;
+}
+
+.sus-footer .sus-hover {
+    position: absolute;
+    inset: 0;
+    background-color: #1F010F;
+    border-radius: 9999px;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.sus-footer h4 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    color: #F0D3EB;
+    transition: color 0.3s ease;
+}
+
+.sus-footer:hover .sus-hover {
+    background-color: #E71D7A;
+}
+
+.redes-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.redes-footer img {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+/*LADO DERECHO FOOTER*/
+.derecha-footer {
+    display: flex;
+    padding-top: 60px;
+    gap: 50px;
+    align-self: center;
+    color: #E71D7A;
+}
+
+.columna-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.columna-footer>h4 {
+    margin: 0;
+}
+
+.grupo-pastis {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fila-pastis {
+    display: flex;
+    gap: 10px;
+}
+
+.pasti-hover {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #E71D7A;
+    border-radius: 23px;
+    padding: 4px 14px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.pasti-hover:hover {
+    background-color: #E71D7A;
+}
+
+.pasti-hover h5 {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.copyright-footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-
-.footer-poise p {
     font-family: "cardo", serif;
-    color: #F0D3EB;
+    font-size: 1rem;
+    color: #FFE9FB;
     font-weight: 400;
-    font-size: 0.9rem;
     font-style: italic;
-    text-align: center;
-    align-self: baseline;
-    margin-left: 0;
+    padding-bottom: 15px;
+    margin: 0;
+    align-content: center;
 }
