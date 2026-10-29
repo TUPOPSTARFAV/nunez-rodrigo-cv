@@ -84,7 +84,7 @@ h3 {
     font-family: "bovino";
     font-weight: normal;
     font-size: 3rem;
-    color: #E71D7A;
+    color: #FFE9FB;
 }
 
 h4 {
@@ -534,8 +534,8 @@ strong {
 }
 
 .carrusel h3,
-h2,
-p {
+.carrusel h2,
+.carrusel p {
     margin: 35px;
     text-align: center;
 }
@@ -556,12 +556,9 @@ p {
     padding: 50px;
     box-sizing: border-box;
     pointer-events: none;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .info-girlie {
@@ -570,11 +567,144 @@ p {
     align-items: center;
 }
 
-.info-girlie h3,
-h2,
-p {
-    color: #F0D3EB
+.info-girlie h2 {
+    color: #FFE9FB;
 }
+
+.tarjeton-memoria {
+    position: absolute;
+    top: 50%;
+    left: 83.4%;
+    /*perdon por esta cifra tan rebuscada pero me daba tic que no encaje*/
+    transform: translate(-50%, -50%);
+    width: 640px;
+    height: 640px;
+    background-color: #1F010F;
+    padding: 50px;
+    box-sizing: border-box;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+.info-memoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-memoria h2,
+.info-memoria h3,
+.info-memoria p {
+    color: #E71D7A;
+}
+
+.tarjeton-vinilo {
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    transform: translate(-50%, -50%);
+    width: 640px;
+    height: 640px;
+    background-color: #E71D7A;
+    padding: 50px;
+    box-sizing: border-box;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-vinilo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-vinilo h2,
+.info-vinilo p,
+.info-vinilo em,
+.info-vinilo strong {
+    color: #FFE9FB;
+}
+
+
+.tarjeton-echo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 640px;
+    height: 640px;
+    background-color: #1F010F;
+    padding: 50px;
+    box-sizing: border-box;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-echo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-echo h2 {
+    color: #FFE9FB;
+}
+
+
+.tarjeton-popstar {
+    position: absolute;
+    top: 50%;
+    left: 83.4%;
+    transform: translate(-50%, -50%);
+    width: 640px;
+    height: 640px;
+    background-color: #E71D7A;
+    padding: 50px;
+    box-sizing: border-box;
+    pointer-events: none;
+    display: flex;
+    align-items: flex-end;
+}
+
+.info-popstar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 50px;
+    padding-bottom: 30px; /*acá estoy usando el padding para centrar y sé que está mal pero no me sale*/
+}
+
+.info-popstar h2,
+.info-popstar p {
+    color: #FFE9FB;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
