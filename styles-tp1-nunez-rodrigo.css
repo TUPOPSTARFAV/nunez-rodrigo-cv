@@ -1020,12 +1020,12 @@ footer {
     }
 
     .info-popstar {
-        padding-left: 0 !important;
-        padding-bottom: 0 !important;
-        text-align: center !important;
+        padding-left: 0;
+        padding-bottom: 0;
+        text-align: center;
     }
 
-    /*le pongo solo a este texto de popstar porque no queda centrado como los otros y sé que es medio atado con alambre el !important*/
+    /*le pongo solo a este texto de popstar porque no queda centrado como los otros y sé que es medio atado con alambre el*/
 
 
     .info-girlie h3,
