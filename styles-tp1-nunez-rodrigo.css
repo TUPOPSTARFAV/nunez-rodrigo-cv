@@ -5,6 +5,9 @@
 trabajo todo con el inspector de google en 1920x1080 porque mi pantalla es muy chiquita. 
 Las cosas se ven bien así, pero cuando las ajusto en mi pantalla si se juntan un poquito y no quedan óptimas.*/
 
+/* En algunas cosas uso poistion:relative que sé que no es lo mejor, pero si no hacia eso los objetos se me colvian 
+locas las páginas y los objetos se iban por todos lados*/
+
 /* colores poise:
 fucsia: #E71D7A
 supernova: #1F010F
@@ -70,6 +73,13 @@ p {
     font-style: normal;
     font-size: 1.43rem;
     color: #1F010F;
+}
+
+h1 {
+    font-family: "bovino";
+    font-size: 30rem;
+    color: #E71D7A;
+    padding-right: 85px;
 }
 
 h2 {
@@ -183,6 +193,54 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
+}
+
+/*INICIO Y BIENVENIDA*/
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.poise-index {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    z-index: 3;
+}
+
+.poise-index-contenedor {
+    display: flex;
+    width: max-content;
+    white-space: nowrap;
+    animation: scroll-poise 40s linear infinite;
+}
+
+@keyframes scroll-poise {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .seccion-bienvenida {
@@ -677,7 +735,8 @@ strong {
     flex-direction: column;
     align-items: center;
     padding-left: 50px;
-    padding-bottom: 30px; /*acá estoy usando el padding para centrar y sé que está mal pero no me sale*/
+    padding-bottom: 30px;
+    /*acá estoy usando el padding para centrar y sé que está mal pero no me sale*/
 }
 
 .info-popstar h2,
@@ -689,7 +748,7 @@ strong {
 /*FOOTER*/
 footer {
     box-shadow: 1px -17px 20px #F0D3EB;
-    background-image: url(img/footer-poise.png);
+    background-image: url(img/footer-poise.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -822,4 +881,310 @@ footer {
     padding-bottom: 15px;
     margin: 0;
     align-content: center;
+}
+
+
+
+
+/* MEDIA QUERIES (RESPONSIVE) */
+
+@media screen and (max-width: 600px) {
+
+    /*INDEX*/
+    .nav {
+        flex-direction: column-reverse;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .nav-izquierda,
+    .nav-centro,
+    .nav-derecha {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav-derecha {
+        padding-right: 40px;
+    }
+
+    .nav-centro {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+
+    .seccion-bienvenida {
+        flex-direction: column;
+        padding-bottom: 0px
+            /*Necesitaba que las estrellitas se centraran y no podía*/
+    }
+
+    .bienvenida img {
+        width: 100%;
+        height: auto;
+    }
+
+    .parrafos-intro {
+        margin-top: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
+        gap: 15px;
+    }
+
+    .parrafos-intro p {
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+
+    .hero-video {
+        height: 100%;
+    }
+
+    .poise-elemento h1 {
+        font-size: 20rem;
+        padding-right: 20px;
+    }
+
+    .movediza-track {
+        display: flex;
+        width: max-content;
+    }
+
+    .movediza-group {
+        display: flex;
+        width: max-content;
+    }
+
+    .movediza-item {
+        transform: none;
+        height: 70px;
+        width: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .proyectos-index-tarjeton {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .proyectos-index-tarjeton img {
+        width: 80%;
+        height: auto;
+    }
+
+    .galeria-index {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .galeria-index article {
+        width: 100%;
+    }
+
+    .galeria-index .contenedor-hover-index {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+
+    /* GALERÍA (PROYECTOS) MOBILE */
+
+    .carrusel {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+    }
+
+    .tarjeton-girlie,
+    .tarjeton-memoria,
+    .tarjeton-vinilo,
+    .tarjeton-echo,
+    .tarjeton-popstar {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        padding: 30px 25px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0px;
+    }
+
+    .info-popstar {
+        padding-left: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+    /*le pongo solo a este texto de popstar porque no queda centrado como los otros*/
+
+
+    .info-girlie h3,
+    .info-memoria h3,
+    .info-vinilo h3,
+    .info-echo h3,
+    .info-popstar h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .info-girlie h2,
+    .info-memoria h2,
+    .info-vinilo h2,
+    .info-echo h2,
+    .info-popstar h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .info-girlie p,
+    .info-memoria p,
+    .info-vinilo p,
+    .info-echo p,
+    .info-popstar p {
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+
+    .carrusel-contenido {
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carrusel-contenido img {
+        width: 100vw;
+        height: 100vw;
+        object-fit: cover;
+    }
+
+    /*Especificamente esto se lo pedí a Gemini. Al principio le agregué a la galería para web una foto 
+    de más en algunos carruseles para que no los tape el tarjetón de info, el tema es que en mobile ya no lo diseñé así,
+    entonces le pregunté como eliminarla sin tocar el HTML y me explicó como funciona esto*/
+    .carrusel:nth-of-type(2) .carrusel-contenido img[src="img/memoria-tp-05.jpg"]+img[src="img/memoria-tp-05.jpg"],
+    .carrusel:nth-of-type(3) .carrusel-contenido img[src="img/vinilo-tp-cover.jpg"]:first-of-type,
+    .carrusel:nth-of-type(5) .carrusel-contenido img[src="img/popstar-05.jpg"]+img[src="img/popstar-05.jpg"] {
+        display: none;
+    }
+
+
+
+    /* CONTACTO MOBILE*/
+    .contacto {
+        flex-direction: column;
+    }
+
+    .formulario-contacto {
+        margin-top: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 30px;
+        gap: 35px;
+    }
+
+    .contacto-mixta {
+        content: url("img/contactanos-mobile.svg");
+        display: block;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .boton-enviar {
+        text-align: center;
+    }
+
+
+    /* SOBRE NOSOTROS MOBILE*/
+    .sobre-nosotros {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .foto-nosotros {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .nosotros-derecha {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tarjetones-grilla {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .tarjetones-grilla>div {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .tarjeton-dos {
+        background-color: #1F010F;
+    }
+
+    .tarjeton-dos p {
+        color: #FFE9FB;
+    }
+
+    .tarjeton-habilidades h2,
+    .tarjeton-cuatro h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .tarjetones-grilla p {
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+
+    .iconitos {
+        justify-content: center;
+        gap: 25px;
+        margin-top: 15px;
+    }
+
+
+
+    /*FOOTER MOBILE*/
+    footer {
+        background-image: url('img/footer-poise-mobile.svg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .footer-poise {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .derecha-footer {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 70px;
+        padding-bottom: 30px;
+        align-self: flex-start;
+    }
+
+    .copyright-footer {
+        color: #1F010F;
+        padding-bottom: 30px;
+    }
 }

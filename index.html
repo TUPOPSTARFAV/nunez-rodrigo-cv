@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>POISE | ONLINE MAGAZINE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles-tp1-nunez-rodrigo.css">
     <link rel="icon" type="ico" href="img/favicon.ico">
     <style>
@@ -35,8 +36,19 @@
 
     <main>
         <div class="hero">
-            <video autoplay loop muted load src="img/poise-index-rodri.mp4" alt="video poise de madonna y princesas"
-                width="100%" height="100%"></video>
+            <video autoplay loop muted playsinline class="hero-video">
+                <source src="img/poise-index-rodri.mp4" type="video/mp4" />
+            </video>
+            <div class="poise-index">
+                <div class="poise-index-contenedor">
+                    <div class="poise-elemento">
+                        <h1>Poise Poise Poise Poise Poise Poise Poise Poise Poise Poise Poise Poise</h1>
+                    </div>
+                    <div class="poise-elemento">
+                        <h1>Poise Poise Poise Poise Poise Poise Poise Poise Poise Poise Poise Poise</h1>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="seccion-bienvenida">
@@ -47,7 +59,7 @@
 
             <!--Por algún motivo que no entiendo no me deja ponerle italica ni bold a las palabras porque se separa en una especie
             de párrafo. Intenté hacerlo con las etiquetas de SPAN y de CLASS, pero no me deja, entonces fui con la siempre comfiable
-             STRONG, pero me pasa lo mismo-->
+             STRONG, pero me pasa lo mismo. Es raro porque funcinó en todos los HTML menos en este-->
             <div class="parrafos-intro">
                 <p>Fundada en 2024 como una revista de moda alcanzamos rapidamente el
                     status de una marca multirubros: celebridades, cine, diseño, música, editoriales, proyectos
@@ -163,7 +175,7 @@
     <footer>
         <div class="footer-poise">
             <section class="izquierda-footer">
-                <a href="index.html"> <img src="img/Poise-logo-footer.svg" alt="logo poise footer">
+                <a href="index.html"> <img src="img/poise-logo-footer.svg" alt="logo poise footer">
                 </a>
                 <a href="#" class="sus-footer">
                     <span class="sus-hover"></span>
@@ -221,7 +233,8 @@
                             </a>
                         </div>
                         <div class="fila-pastis">
-                            <a href="#" class="pasti-hover">
+                            <a href="https://drive.google.com/file/d/15S6HnqpdoPVItI-ytKzzXhFLtpfHKPLv/view?usp=drive_link"
+                                target="_blank" class="pasti-hover">
                                 <h5>Música</h5>
                             </a>
                             <a href="#" class="pasti-hover">
