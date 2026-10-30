@@ -1071,7 +1071,7 @@ footer {
     /*Especificamente esto se lo pedí a Gemini. Al principio le agregué a la galería para web una foto 
     de más en algunos carruseles para que no los tape el tarjetón de info, el tema es que en mobile ya no lo diseñé así,
     entonces le pregunté como eliminarla sin tocar el HTML y me explicó como funciona esto*/
-    .carrusel:nth-of-type(2) .carrusel-contenido img[src="img/memoria-tp-05.jpg"]+img[src="img/memoria-tp-05.jpg"],
+    .carrusel:nth-of-type(2) .carrusel-contenido img[src="img/memoria-t-p-05.jpg"]+img[src="img/memoria-t-p-05.jpg"],
     .carrusel:nth-of-type(3) .carrusel-contenido img[src="img/vinilo-tp-cover.jpg"]:first-of-type,
     .carrusel:nth-of-type(5) .carrusel-contenido img[src="img/popstar-05.jpg"]+img[src="img/popstar-05.jpg"] {
         display: none;
