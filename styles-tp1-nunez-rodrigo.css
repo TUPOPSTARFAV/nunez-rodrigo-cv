@@ -1020,11 +1020,12 @@ footer {
     }
 
     .info-popstar {
-        padding-left: 0;
-        padding-bottom: 0;
-        text-align: center;
+        padding-left: 0 !important;
+        padding-bottom: 0 !important;
+        text-align: center !important;
     }
-    /*le pongo solo a este texto de popstar porque no queda centrado como los otros*/
+
+    /*le pongo solo a este texto de popstar porque no queda centrado como los otros y sé que es medio atado con alambre el !important*/
 
 
     .info-girlie h3,
@@ -1085,8 +1086,8 @@ footer {
 
     .formulario-contacto {
         margin-top: 20px;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
         margin-bottom: 30px;
         gap: 35px;
     }
@@ -1094,6 +1095,8 @@ footer {
     .contacto-mixta {
         content: url("img/contactanos-mobile.svg");
         display: block;
+        width: 100vw;
+        position: relative;
     }
 
     .form-footer {
@@ -1155,9 +1158,12 @@ footer {
     }
 
     .iconitos {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 25px;
-        margin-top: 15px;
+        gap: 35px;
+        max-width: 290px;
+        margin: 15px auto 0 auto;
     }
 
 
